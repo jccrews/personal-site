@@ -1,8 +1,7 @@
+import { routes } from '@redwoodjs/router'
 import { Toaster } from '@redwoodjs/web/toast'
 
 import Navbar from 'src/components/Navbar/Navbar'
-
-import '@reach/skip-nav/styles.css'
 
 type NavLayoutProps = {
   children?: React.ReactNode
@@ -12,17 +11,19 @@ const START_MENU_ITEMS = [
   {
     to: '/projects',
     label: 'Projects',
+    submenu: [
+      { to: routes.wordification(), label: 'Wordification' },
+      { to: routes.whatsThatPlant(), label: `What's That Plant` },
+      { to: routes.dkms(), label: 'DKMS' },
+    ],
   },
 ] as const
 
 const END_MENU_ITEMS = [
   {
-    to: '/personal',
+    to: '/personal-projects',
     label: 'Personal Projects',
-    submenu: [
-      { to: '/chickens', label: 'Project Chickens' },
-      { to: '/cars', label: 'Project Cars' },
-    ],
+    submenu: [{ to: '/personal-projects/henhouse', label: 'Henhouse' }],
   },
   {
     to: '/about',
