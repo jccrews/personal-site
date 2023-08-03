@@ -1,14 +1,14 @@
 import { render } from '@redwoodjs/testing/web'
 
-import ProjectsPage from './ProjectsPage'
+import Header from './Header'
 
 //   Improve this test with help from the Redwood Testing Doc:
-//   https://redwoodjs.com/docs/testing#testing-pages-layouts
+//    https://redwoodjs.com/docs/testing#testing-components
 
-describe('ProjectsPage', () => {
+describe('Header', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<ProjectsPage />)
+      render(<Header />)
     }).not.toThrow()
   })
 })

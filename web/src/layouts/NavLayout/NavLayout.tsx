@@ -13,7 +13,6 @@ const START_MENU_ITEMS = [
     label: 'Clay Crews',
   },
   {
-    to: '/projects',
     label: 'Projects',
     submenu: [
       { to: '/projects/wordification', label: 'Wordification' },
@@ -22,14 +21,13 @@ const START_MENU_ITEMS = [
     ],
   },
   {
-    to: '/personal-projects',
     label: 'Personal Projects',
     submenu: [{ to: '/personal-projects/henhouse', label: 'Henhouse' }],
   },
 ] as const
 
 export type MenuItem = {
-  to: string
+  to?: string
   label: string
   submenu?: readonly {
     to: string
@@ -39,11 +37,18 @@ export type MenuItem = {
 
 const NavbarItem = ({ item }: { item: MenuItem }) => (
   <>
-    <li>
-      <Link className="font-bold normal-case rounded" to={item.to}>
-        {item.label}
-      </Link>
-    </li>
+    {item.to ? (
+      <li>
+        <Link className="font-bold normal-case text-lg rounded" to={item.to}>
+          {item.label}
+        </Link>
+      </li>
+    ) : (
+      <li className="pointer-events-none">
+        <h1 className="font-bold normal-case text-lg rounded">{item.label}</h1>
+      </li>
+    )}
+
     {item.submenu && (
       <li className="ml-4">
         {item.submenu.map((subItem) => (
@@ -57,6 +62,7 @@ const NavbarItem = ({ item }: { item: MenuItem }) => (
         ))}
       </li>
     )}
+
     <div className="divider"></div>
   </>
 )
@@ -86,7 +92,7 @@ const NavLayout = ({ children }: NavLayoutProps) => {
           }
           <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
             {START_MENU_ITEMS.map((item) => (
-              <NavbarItem item={item} key={item.to} />
+              <NavbarItem item={item} key={item.label} />
             ))}
           </ul>
         </div>

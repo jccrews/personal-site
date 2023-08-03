@@ -17,13 +17,11 @@ const Routes = () => {
       <Set wrap={NavLayout}>
         <Set>
           <Route path="/personal-projects/henhouse" page={PersonalProjectsHenhousePage} name="henhouse" />
-          <Route path="/personal-projects" page={PersonalProjectsPage} name="personalProjects" />
         </Set>
         <Set>
           <Route path="/projects/wordification" page={ProjectsWordificationPage} name="wordification" />
           <Route path="/projects/whats-that-plant" page={ProjectsWhatsThatPlantPage} name="whatsThatPlant" />
           <Route path="/projects/dkms" page={ProjectsDkmsPage} name="dkms" />
-          <Route path="/projects" page={ProjectsPage} name="projects" />
         </Set>
         <Route path="/about" page={AboutPage} name="about" />
         <Route path="/" page={HomePage} name="home" />
