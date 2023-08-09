@@ -60,12 +60,14 @@ const ProjectsWordificationPage = () => {
                 GraphQL is a query language used to manage the back-end data.
                 The formatting is easy to understand making writing more complex
                 queries go smoothly. An example of using GraphQL in RedwoodJS is
-                through the use of Cells. Cells are a Redwood component that
-                “provide a simpler and more declarative approach to data
-                fetching”<sup>1</sup> Cells are independent from the rest of the
-                components on a page, therefore faster for data retrieval, able
-                to act on their own without passing data down through page
-                props.
+                through the use of Cells.
+              </p>
+              <p>
+                Cells are a Redwood component that “provide a simpler and more
+                declarative approach to data fetching”<sup>1</sup> Cells are
+                independent from the rest of the components on a page, therefore
+                faster for data retrieval, able to act on their own without
+                passing data down through page props.
               </p>
             </div>
           </div>
@@ -74,11 +76,11 @@ const ProjectsWordificationPage = () => {
             <div className="card-body">
               <h2 className="card-title">Prisma</h2>
               <p>
-                Prisma is defines the schema for the application’s database.
-                Prisma, next-generation Node.js and TypeScript ORM are used to
-                communicate with the database. Models for the schema of the data
-                are defined and types are used so that mismatching datatype
-                entry is prevented.
+                Prisma is defines the schema for the application&apos;s
+                database. Prisma, next-generation Node.js and TypeScript ORM are
+                used to communicate with the database. Models for the schema of
+                the data are defined and types are used so that mismatching
+                datatype entry is prevented.
               </p>
               <p>
                 RedwoodJS automates a lot of creating of code with code
