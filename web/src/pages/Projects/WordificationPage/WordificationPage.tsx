@@ -1,10 +1,6 @@
 import { MetaTags } from '@redwoodjs/web'
 
 const ProjectsWordificationPage = () => {
-  /**
-   * TODO: TALK ABOUT DIFFERENT TECHNOLOGIES USED:
-   *  REDWOOD, GRAPHQL, PRISMA, NETLIFY, NEON, ETC...
-   */
   return (
     <>
       <MetaTags title="Wordification" description="Wordification page" />

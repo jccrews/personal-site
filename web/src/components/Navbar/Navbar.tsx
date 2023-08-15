@@ -2,7 +2,7 @@ import { Link, routes } from '@redwoodjs/router'
 
 const Navbar = () => (
   <nav className="navbar">
-    <div className="navbar-start">
+    <div className="navbar-start gap-2">
       <div className="flex-none">
         <label
           htmlFor="my-drawer"
