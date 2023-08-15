@@ -1,4 +1,4 @@
-import { Link } from '@redwoodjs/router'
+import { Link, useLocation } from '@redwoodjs/router'
 import { Toaster } from '@redwoodjs/web/toast'
 
 import Navbar from 'src/components/Navbar/Navbar'
@@ -35,37 +35,50 @@ export type MenuItem = {
   }[]
 }
 
-const NavbarItem = ({ item }: { item: MenuItem }) => (
-  <>
-    {item.to ? (
-      <li>
-        <Link className="font-bold normal-case text-lg rounded" to={item.to}>
-          {item.label}
-        </Link>
-      </li>
-    ) : (
-      <li className="pointer-events-none">
-        <h1 className="font-bold normal-case text-lg rounded">{item.label}</h1>
-      </li>
-    )}
+const NavbarItem = ({ item }: { item: MenuItem }) => {
+  const { pathname } = useLocation()
 
-    {item.submenu && (
-      <li className="ml-4">
-        {item.submenu.map((subItem) => (
+  return (
+    <>
+      {item.to ? (
+        <li>
           <Link
-            className="font-semibold normal-case rounded"
-            to={subItem.to}
-            key={subItem.to}
+            className={`font-bold normal-case text-lg rounded ${
+              pathname === item.to ? 'bg-accent' : ''
+            }`}
+            to={item.to}
           >
-            {subItem.label}
+            {item.label}
           </Link>
-        ))}
-      </li>
-    )}
+        </li>
+      ) : (
+        <li className="pointer-events-none">
+          <h1 className="font-bold normal-case text-lg rounded">
+            {item.label}
+          </h1>
+        </li>
+      )}
 
-    <div className="divider"></div>
-  </>
-)
+      {item.submenu && (
+        <li className="ml-4">
+          {item.submenu.map((subItem) => (
+            <Link
+              className={`font-semibold normal-case rounded ${
+                pathname === subItem.to ? 'bg-accent' : ''
+              }`}
+              to={subItem.to}
+              key={subItem.to}
+            >
+              {subItem.label}
+            </Link>
+          ))}
+        </li>
+      )}
+
+      <div className="divider"></div>
+    </>
+  )
+}
 
 const NavLayout = ({ children }: NavLayoutProps) => {
   return (

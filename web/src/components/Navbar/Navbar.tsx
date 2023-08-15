@@ -24,7 +24,7 @@ const Navbar = () => (
         </label>
       </div>
       <Link
-        className="btn btn-ghost rounded text-xl normal-case mr-10"
+        className="btn btn-ghost rounded text-xl normal-case mr-10 bg-accent"
         to={routes.home()}
       >
         Clay Crews
