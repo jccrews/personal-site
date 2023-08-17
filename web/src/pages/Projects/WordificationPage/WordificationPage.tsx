@@ -25,7 +25,7 @@ const ProjectsWordificationPage = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-1">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
           <div className="card w-full bg-primary text-primary-content">
             <div className="card-body">
               <h2 className="card-title">RedwoodJS</h2>

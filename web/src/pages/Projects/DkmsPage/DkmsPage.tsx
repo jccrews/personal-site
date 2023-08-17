@@ -23,7 +23,7 @@ const ProjectsDkmsPage = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-1">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-2">
           <div className="card w-full bg-primary text-primary-content">
             <div className="card-body">
               <h2 className="card-title">Project Introduction</h2>
@@ -94,7 +94,7 @@ const ProjectsDkmsPage = () => {
             </div>
           </div>
         </div>
-        <div className="card w-full bg-primary text-primary-content">
+        <div className="card w-full bg-primary text-primary-content mt-1">
           <div className="card-body">
             <h2 className="card-title">Bringing DKMS to Life</h2>
             <p>
