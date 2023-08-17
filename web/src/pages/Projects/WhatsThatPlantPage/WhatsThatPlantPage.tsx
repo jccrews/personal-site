@@ -6,7 +6,7 @@ const WhatsThatPlantPage = () => {
       <MetaTags title="WhatsThatPlant" description="WhatsThatPlant page" />
 
       <div className="flex flex-col gap-2">
-        <div className="card w-full bg-primary text-primary-content">
+        <div className="card w-full bg-primary text-primary-content mb-5">
           <div className="card-body">
             <h2 className="card-title text-3xl">What&apos;s That Plant</h2>
             <p>
