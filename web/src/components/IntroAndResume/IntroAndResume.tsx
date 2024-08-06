@@ -19,7 +19,7 @@ const IntroAndResume = () => {
             University of South Carolina
           </p>
           <div>
-            <p>Contact me at:</p>
+            <p>Contact me:</p>
             <p className="font-semibold">j.clayton.crews@gmail.com</p>
           </div>
         </div>
