@@ -4,7 +4,7 @@ const IntroAndResume = () => {
       <div className="hero-content flex-col-reverse lg:flex-row-reverse py-20">
         <div className="flex flex-col">
           <a
-            href="https://docs.google.com/viewer?url=https://jccrews.com/resume.pdf&embedded=true"
+            href="https://docs.google.com/viewer?url=https://jccrews.com/resume-file.pdf&embedded=true"
             target="_blank"
             rel="noopener noreferrer"
           >
