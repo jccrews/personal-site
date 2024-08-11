@@ -16,10 +16,12 @@
   port = 8888
 
 [[redirects]]
-  from = "/*"
-  to = "/200.html"
-  status = 200
   from = "/resume.pdf"
   to = "https://docs.google.com/viewer?url=https://jccrews.com/resume.pdf&embedded=true"
   status = 302
   force = true
+[[redirects]]
+  from = "/*"
+  to = "/200.html"
+  status = 200
+
