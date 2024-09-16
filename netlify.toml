@@ -20,6 +20,7 @@
   to = "https://docs.google.com/viewer?url=https://jccrews.com/resume-file.pdf&embedded=true"
   status = 302
   force = true
+
 [[redirects]]
   from = "/*"
   to = "/200.html"
