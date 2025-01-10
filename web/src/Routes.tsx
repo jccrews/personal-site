@@ -14,7 +14,6 @@ import NavLayout from 'src/layouts/NavLayout'
 const Routes = () => {
   return (
     <Router>
-      <Route path="/resume" page={ResumePage} name="resume" />
       <Set wrap={NavLayout}>
         <Set>
           <Route path="/personal-projects/henhouse" page={PersonalProjectsHenhousePage} name="henhouse" />
