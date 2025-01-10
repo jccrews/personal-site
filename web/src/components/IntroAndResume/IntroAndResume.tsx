@@ -3,7 +3,7 @@ const IntroAndResume = () => {
     <div className="hero 1/2-h-screen bg-base-200 rounded-lg">
       <div className="hero-content flex-col-reverse lg:flex-row-reverse py-20">
         <div className="flex flex-col">
-          <a href="/resume.pdf" target="_blank">
+          <a href="http://docs.google.com/gview?url=http://jccrews.com/resume.pdf&embedded=true" target="_blank">
             <img
               src="resume_img.png"
               className="max-w-sm w-full h-auto rounded-lg shadow-2xl"
