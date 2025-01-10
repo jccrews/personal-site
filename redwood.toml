@@ -17,8 +17,3 @@
 [notifications]
   versionUpdates = ["latest"]
 
-[[redirects]]
-  from = "/resume.pdf"
-  to = "/resume"
-  status = 302
-  force = true
